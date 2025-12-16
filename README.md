@@ -16,6 +16,7 @@ NotallyPlus is a note-taking app based on [Notally](https://github.com/OmGodse/N
 ### Optimized Features
 * ✅ Fixed the bug that caused recording crashes
 * ✅ Optimized Simplified Chinese translations
+* ✅Keep updating
 
 ### Copycats
 Unlike [Notally](https://github.com/OmGodse/Notally) and [NotallyX](https://github.com/Crustack/NotallyX?tab=readme-ov-file), this app (NotallyPlus) will not be published on the Play Store.
