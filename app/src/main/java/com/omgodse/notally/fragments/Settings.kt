@@ -72,7 +72,7 @@ class Settings : Fragment() {
         setupProgressDialog(R.string.importing_backup, model.importingBackup)
 
         binding.GitHub.setOnClickListener {
-            openLink("https://github.com/OmGodse/Notally")
+            openLink("https://github.com/Chysie2010413/NotallyPlus-2025")
         }
 
         binding.Libraries.setOnClickListener {
@@ -152,7 +152,7 @@ class Settings : Fragment() {
         val intent = Intent(Intent.ACTION_SEND)
         intent.selector = Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"))
 
-        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("omgodseapps@gmail.com"))
+        intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("chysie2010413@outlook.com"))
         intent.putExtra(Intent.EXTRA_SUBJECT, "Notally [Feedback]")
 
         val app = requireContext().applicationContext as Application
