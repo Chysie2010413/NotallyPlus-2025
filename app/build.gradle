@@ -33,6 +33,7 @@ android {
             crunchPngs false
             minifyEnabled true
             shrinkResources true
+            debuggable false // 显式关闭debug模式，确保无debug属性
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
     }
