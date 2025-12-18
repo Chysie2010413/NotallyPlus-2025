@@ -1,9 +1,6 @@
 ### Background
 NotallyPlus is a note-taking app based on [Notally](https://github.com/OmGodse/Notally), designed to optimize stability and add a handful of features while keeping it as lightweight as possible.
 
-### Translations
-Thank you for your willingness to contribute to the translation of this project. If you are interested, feel free to send me an email at <a href="mailto:chysie2010413@outlook.com">chysie2010413@outlook.com</a> after reviewing the <a href="https://m2.material.io/design/communication/writing.html" target="_blank">documentation</a>.
-
 ### Features
 * Widgets
 * Auto backup
