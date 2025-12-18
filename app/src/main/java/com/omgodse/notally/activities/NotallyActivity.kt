@@ -126,6 +126,7 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
                     val list = data?.getParcelableArrayListExtra<Image>(ViewImage.DELETED_IMAGES)
                     if (!list.isNullOrEmpty()) {
                         model.deleteImages(list)
+                        Toast.makeText(this, R.string.images_deleted, Toast.LENGTH_SHORT).show()
                     }
                 }
                 REQUEST_SELECT_LABELS -> {
@@ -140,6 +141,7 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
                     val audio = data?.getParcelableExtra<Audio>(PlayAudio.AUDIO)
                     if (audio != null) {
                         model.deleteAudio(audio)
+                        Toast.makeText(this, R.string.audio_deleted, Toast.LENGTH_SHORT).show()
                     }
                 }
             }
@@ -301,16 +303,24 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
 
     private fun delete() {
         model.folder = Folder.DELETED
+        Toast.makeText(this, R.string.note_moved_to_trash, Toast.LENGTH_SHORT).show()
         finish()
     }
 
     private fun restore() {
+        val toastText = if (model.folder == Folder.DELETED) {
+            R.string.note_restored
+        } else {
+            R.string.note_unarchived
+        }
         model.folder = Folder.NOTES
+        Toast.makeText(this, toastText, Toast.LENGTH_SHORT).show()
         finish()
     }
 
     private fun archive() {
         model.folder = Folder.ARCHIVED
+        Toast.makeText(this, R.string.note_archived, Toast.LENGTH_SHORT).show()
         finish()
     }
 

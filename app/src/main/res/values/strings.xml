@@ -172,4 +172,11 @@
     <string name="repeats_monthly">%1$s, Repeats monthly</string>
     <string name="please_grant_notally_notification">Please grant Notally the permission to send notifications</string>
     <string name="please_grant_notally_alarm">Please grant Notally the permission to set alarms</string>
+
+    <string name="audio_deleted">Audio deleted</string>
+    <string name="images_deleted">Images deleted</string>
+    <string name="note_moved_to_trash">Note moved to trash</string>
+    <string name="note_restored">Note restored</string>
+    <string name="note_archived">Note archived</string>
+    <string name="note_unarchived">Note unarchived</string>
 </resources>
