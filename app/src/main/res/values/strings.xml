@@ -1,14 +1,12 @@
 <resources>
     <string name="app_name" translatable="false">NotallyPlus</string>
 
-    <!-- Fragment Titles -->
     <string name="notes">Notes</string>
     <string name="labels">Labels</string>
     <string name="deleted">Deleted</string>
     <string name="archived">Archived</string>
     <string name="settings">Settings</string>
 
-    <!-- Menu Options -->
     <string name="share">Share</string>
     <string name="filter">Filter</string>
     <string name="search">Search</string>
@@ -23,17 +21,17 @@
     <string name="change_color">Change color</string>
     <string name="make_a_copy">Make a copy</string>
     <string name="delete_forever">Delete forever</string>
+    <string name="copy_to_clipboard">Copy to Clipboard</string>
+    <string name="no_content_to_copy">No content to copy</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
 
-    <!-- Pinning -->
     <string name="pin">Pin</string>
     <string name="unpin">Unpin</string>
     <string name="pinned">Pinned</string>
     <string name="others">Others</string>
 
-    <!-- Chooser dialog hints -->
     <string name="view_note">View note</string>
 
-    <!-- Dialogs -->
     <string name="save">Save</string>
     <string name="edit">Edit</string>
     <string name="cancel">Cancel</string>
@@ -54,7 +52,6 @@
     <string name="delete_note_forever">Delete note forever?</string>
     <string name="your_notes_associated">Your notes attached to this label will not be deleted</string>
 
-    <!-- Lists and Notes -->
     <string name="note">Note</string>
     <string name="item">Item</string>
     <string name="date">Date</string>
@@ -69,21 +66,18 @@
     <string name="clear_formatting">Clear formatting</string>
     <string name="monospace">Monospace</string>
 
-    <!-- Miscellaneous -->
     <string name="saved_to_device">Saved to device</string>
     <string name="saved_to_notally">Saved to Notally</string>
     <string name="empty_note">Empty note</string>
     <string name="empty_list">Empty list</string>
     <string name="select_labels">Select labels</string>
 
-    <!-- Messages -->
     <string name="cant_open_link">Can’t open link</string>
     <string name="something_went_wrong">Something went wrong. Please try again.</string>
     <string name="install_an_email">Install an email app to send feedback</string>
     <string name="install_a_browser">Install a browser to open this link</string>
     <string name="cant_find_note">Can’t find note. It may have been deleted</string>
 
-    <!-- Settings Page -->
     <string name="appearance">Appearance</string>
 
     <string name="view">View</string>
@@ -108,7 +102,6 @@
     <string name="max_lines_to_display">Max lines to display in note</string>
     <string name="max_lines_to_display_title">Max lines to display in title</string>
 
-    <!-- Backup -->
     <string name="backup">Backup</string>
     <string name="auto_backup">Auto backup</string>
     <string name="tap_to_set_up">Tap to set up</string>
@@ -133,11 +126,9 @@
 
     <string name="github" translatable="false">GitHub</string>
 
-    <!-- Widget -->
     <string name="single_note_or_list">Single note or list</string>
     <string name="select_note">Select note</string>
 
-    <!-- Images -->
     <string name="count" translatable="false">%1$d / %2$d</string>
     <string name="adding_images">Adding images</string>
     <string name="deleting_images">Deleting images</string>
@@ -155,7 +146,6 @@
         <item quantity="other">Can’t add %d images</item>
     </plurals>
 
-    <!-- Audio -->
     <string name="play">Play</string>
     <string name="stop">Stop</string>
     <string name="start">Start</string>
@@ -173,7 +163,6 @@
     <string name="insert_an_sd_card_audio">Insert an SD card to record audio</string>
     <string name="something_went_wrong_audio">Something went wrong. The audio recording may have been moved or deleted.\n\nError : (%1$d, %2$d)</string>
 
-    <!-- Reminder -->
     <string name="time">Time</string>
     <string name="select_frequency">Select frequency</string>
     <string name="does_not_repeat">Does not repeat</string>

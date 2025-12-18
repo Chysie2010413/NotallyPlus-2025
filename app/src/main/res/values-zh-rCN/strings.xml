@@ -84,6 +84,9 @@
     <string name="install_an_email">请安装邮件应用以发送反馈</string>
     <string name="install_a_browser">请安装浏览器以打开此链接</string>
     <string name="cant_find_note">找不到该笔记，可能已被删除</string>
+    <string name="copy_to_clipboard">复制到剪贴板</string>
+    <string name="no_content_to_copy">无内容可复制</string>
+    <string name="copied_to_clipboard">已复制至剪贴板</string>
 
     <!-- 设置页面 -->
     <string name="appearance">外观</string>
@@ -116,7 +119,7 @@
     <string name="choose_another_folder">更换文件夹</string>
     <string name="cant_find_folder">找不到文件夹，可能已被移动或删除</string>
     <string name="invalid_backup">无效的备份文件</string>
-    <string name="imported_backup">备份导入完成</string>
+    <string name="imported_backup">已导入备份</string>
     <string name="exporting_backup">正在导出备份</string>
     <string name="importing_backup">正在导入备份</string>
     <string name="calculating">计算中…</string>
@@ -127,7 +130,7 @@
     <string name="about">关于</string>
     <string name="libraries">使用的库</string>
     <string name="rate">给应用评分</string>
-    <string name="send_feedback">提交反馈</string>
+    <string name="send_feedback">发送反馈</string>
 
     <!-- GitHub（不翻译） -->
     <string name="github" translatable="false">GitHub</string>
@@ -164,7 +167,7 @@
     <string name="paused">已暂停</string>
     <string name="recording">正在录音…</string>
     <string name="ready_to_record">准备录音</string>
-    <string name="discard">舍弃</string>
+    <string name="discard">放弃</string>
     <string name="save_recording">保存录音？</string>
     <string name="delete_audio_recording_forever">永久删除该音频录音？</string>
     <string name="tap_for_more_options">点击查看更多选项</string>

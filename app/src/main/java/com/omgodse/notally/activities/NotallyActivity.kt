@@ -5,6 +5,8 @@ import android.app.Activity
 import android.app.AlarmManager
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -76,7 +78,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         }
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         model.type = type
@@ -105,7 +106,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
             binding.ScrollView.visibility = View.VISIBLE
         }
     }
-
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -144,7 +144,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
                 }
             }
         }
-        // Bug in Samsung: Even if permission was granted result code is RESULT_CANCELED
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             if (requestCode == REQUEST_ALARM_PERMISSION) {
                 val manager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -171,7 +170,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         }
     }
 
-
     abstract fun configureUI()
 
     open fun setupListeners() {
@@ -190,7 +188,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         setColor()
     }
 
-
     private fun handleSharedNote() {
         val title = intent.getStringExtra(Intent.EXTRA_SUBJECT)
 
@@ -205,7 +202,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
             model.title = title
         }
     }
-
 
     @RequiresApi(24)
     private fun checkAudioPermission() {
@@ -259,7 +255,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         } else checkAlarmPermission()
     }
 
-
     private fun recordAudio() {
         if (model.audioRoot != null) {
             val intent = Intent(this, RecordAudio::class.java)
@@ -290,7 +285,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         } else Toast.makeText(this, R.string.insert_an_sd_card_images, Toast.LENGTH_LONG).show()
     }
 
-
     private fun share() {
         val body = when (type) {
             Type.NOTE -> model.body
@@ -320,6 +314,24 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         finish()
     }
 
+    private fun copyToClipboard() {
+        val content = when (type) {
+            Type.NOTE -> model.body?.toString()?.trim()
+            Type.LIST -> Operations.getBody(model.items)
+        }
+
+        if (content.isNullOrEmpty()) {
+            Toast.makeText(this, R.string.no_content_to_copy, Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val clipboardManager = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+        val clipData = ClipData.newPlainText("NotallyPlus_Content", content)
+        clipboardManager.setPrimaryClip(clipData)
+
+        Toast.makeText(this, R.string.copied_to_clipboard, Toast.LENGTH_SHORT).show()
+    }
+
     private fun deleteForever() {
         MaterialAlertDialogBuilder(this)
             .setMessage(R.string.delete_note_forever)
@@ -338,7 +350,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         bindPinned(item)
     }
 
-
     private fun setupImages() {
         val adapter = PreviewImageAdapter(model.imageRoot) { position ->
             val intent = Intent(this, ViewImage::class.java)
@@ -348,7 +359,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
         }
 
         adapter.registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
-
             override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
                 binding.ImagePreview.scrollToPosition(positionStart)
             }
@@ -421,7 +431,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
             binding.AudioRecyclerView.isVisible = list.isNotEmpty()
         }
     }
-
 
     private fun setupReminder() {
         val padding = (resources.displayMetrics.density * 16).toInt()
@@ -532,7 +541,6 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
             .show()
     }
 
-
     private fun setColor() {
         val color = Operations.extractColor(model.color, this)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -564,6 +572,7 @@ abstract class NotallyActivity(private val type: Type) : AppCompatActivity() {
             Folder.NOTES -> {
                 menu.add(R.string.delete, R.drawable.delete) { delete() }
                 menu.add(R.string.archive, R.drawable.archive) { archive() }
+                menu.add(R.string.copy_to_clipboard, 0) { copyToClipboard() }
             }
             Folder.DELETED -> {
                 menu.add(R.string.restore, R.drawable.restore) { restore() }
