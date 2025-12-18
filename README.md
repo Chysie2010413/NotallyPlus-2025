@@ -14,9 +14,11 @@ NotallyPlus is a note-taking app based on [Notally](https://github.com/OmGodse/N
 * Add clickable links to notes with support for phone numbers, email addresses and web urls
 
 ### Optimized Features
-* Fixed the bug that caused recording crashes
-* Optimized Simplified Chinese translations
-* Keep updating......
+* Fixed certain built-in bugs from the pre-fork original Notally app
+* Optimized translation results for certain languages
+
+### Translations
+Thank you for your willingness to contribute to the translation of this project. If you are interested, feel free to [send me an email](mailto:chysie2010413@outlook.com) after reviewing the [documentation](https://m2.material.io/design/communication/writing.html).
 
 ### Copycats
 Unlike [Notally](https://github.com/OmGodse/Notally) and [NotallyX](https://github.com/Crustack/NotallyX?tab=readme-ov-file), this app (NotallyPlus) will not be published on the Play Store.
