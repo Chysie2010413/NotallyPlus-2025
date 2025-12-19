@@ -14,8 +14,11 @@ NotallyPlus is a note-taking app based on [Notally](https://github.com/OmGodse/N
 * Add clickable links to notes with support for phone numbers, email addresses and web urls
 
 ### Improved/added features
-* More comprehensive Toast notifications
-* One-click copy-to-clipboard feature
+- Optimized more comprehensive Toast notifications
+​
+- Adjusted partial translation optimizations
+​
+- Added one-click copy-to-clipboard feature
 
 ### Translations
 Thank you for your willingness to contribute to the translation of this project. If you are interested, feel free to [send me an email](mailto:chysie2010413@outlook.com) after reviewing the [documentation](https://m2.material.io/design/communication/writing.html).
