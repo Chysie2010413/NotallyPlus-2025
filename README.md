@@ -26,6 +26,7 @@ Thank you for your willingness to contribute to the translation of this project.
 ### 💡Feedback/Suggestions
 
 If you have any feedback or suggestions, please **[submit an issue](https://github.com/Chysie2010413/NotallyPlus-2025/issues/new)** or **[send me an email](mailto:chysie2010413@outlook.com)**.
+（Please use English or Chinese）
 
 ### 🚫Copycats
 Unlike [Notally](https://github.com/OmGodse/Notally) and [NotallyX](https://github.com/Crustack/NotallyX?tab=readme-ov-file), this app (NotallyPlus) will not be published on the Play Store.
